@@ -13,3 +13,21 @@ CSS
   ㄴ <link rel="stylesheet" href="경로">
   ㄴ@import url("경로")
 
+<img src="경로">
+결국은 html 이기 때문에 레이아웃에 영향을 줄 수 밖에 없음
+
+css로 background url(경로)
+html이 아닌 요소의 배경으로 처리되서 레이아웃에 직접적인 영향을 주지 않는다
+
+display: html요소가 어떻게 배치되는지 결정하는 속성 (중요한 속성)
+ㄴblock: 한 영역을 차지하는 박스형태를 가지는 성질 기본적으로 width 값이 100%, height, weight를 지정할 수 있다
+margin과 padding을 지정할 수 있다.
+ㄴinline: width를 콘텐츠만큼 차지한다. 높이 또한 콘텐츠의 크기만큼 잡힌다.
+
+overflow: 요소의 내용이 요소의 크기를 초과할 때, 초과된 부분을 어떻게 처리할 것인지 결정하는 속성이다.
+ㄴvisible(기본값): 경계를 벗어나도 내용이 그대로 보임
+ㄴhidden: 넘치는 콘텐츠를 잘라내고 보이지 않게 한다
+ㄴscrool: 요소의 내용이 넘치더라도 스크롤바를 항상 표시한다
+ㄴauto: 콘텐츠가 요소의 크기를 초과할 때만 표시한다
+
+
