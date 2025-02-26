@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns : 300px 50px 100px; /* 가로길이를 각각 300 50 100 3개로 나눈다. */
+	        grid-template-rows : 200px 50px; /* 세로 길이를 200 50 으로 두개로 나눈다. */
+			/*repeat() 함수 : repeat(횟수,크기)*/
+
+			/*grid-template-columns: repeat(9, 100px);*/
+			/* grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px; */
+
+			/*grid-template-columns: repeat(2, 100px 200px 50px);*/
+			/* grid-template-columns: 100px 200px 50px 100px 200px 50px; */
+
+			/*minmax 함수*/
+			/*grid-template-rows: repeat(3, minmax(100px, auto));
+			최소한 100px, 내용이 많아 100px이 넘어가면 알아서 늘어나도록 처리해준다.*/
+
+			/*auto-fill, auto-fit
+			column의 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채운다.
+			grid-template-columns: repeat(auto-fill, minmax(20%, auto));*/
+
+
+
+        }
+
+        div:nth-child(1){
+            background: yellowgreen;
+        }
+        div:nth-child(2){
+            background: lightpink;
+        }
+        div:nth-child(3){
+            background: lightsalmon;
+        }
+        div:nth-child(4){
+            background: lightskyblue;
+        }
+        div:nth-child(5){
+            background: tan;
+        }
+        div:nth-child(6){
+            background: peru;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </section>
+</body>
+</html>

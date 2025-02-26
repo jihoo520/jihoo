@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Submenu</title>
+    <style>
+        #a1 {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        li {
+            position: relative; /* 서브 메뉴 정렬을 위한 상대 위치 설정 */
+            border-right: 1px solid gray;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+
+        li:first-child {
+            border-left: 1px solid gray;
+        }
+
+        a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: blue; /* 기본 글씨 색상: 파란색 */
+        }
+
+        /* 마우스를 올렸을 때 */
+        a:hover {
+            background: #999;
+            color: white; /* 글씨 색상을 흰색으로 변경 */
+        }
+
+        /* 서브 메뉴 가로 정렬 */
+        .depth_1 {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid gray;
+            display: none;
+            white-space: nowrap;
+        }
+
+        .depth_1 ul {
+            display: flex; /* 가로 정렬 */
+        }
+
+        .depth_1 li {
+            border: none;
+        }
+
+        .depth_1 a {
+            padding: 8px 12px;
+            color: blue; /* 서브 메뉴도 기본 색상 파란색 */
+        }
+
+        .depth_1 a:hover {
+            color: white; /* 서브 메뉴에서도 hover 시 흰색 적용 */
+        }
+
+        /* 부모 메뉴에 마우스를 올리면 서브 메뉴 표시 */
+        #menu > li:hover .depth_1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="a1">
+        <ul id="menu">
+            <li>
+                <a href="#">HTML</a>
+                <div class="depth_1">
+                    <ul>
+                        <li><a href="#">메뉴1</a></li>
+                        <li><a href="#">메뉴2</a></li>
+                        <li><a href="#">메뉴3</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">JQuery</a></li>
+            <li><a href="#">JSP</a></li>
+        </ul>
+    </div>
+</body>
+</html>
