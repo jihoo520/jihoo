@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
-    <h1>프론트앤드 개발자 지원서</h1>
-    <strong>HTML, CSS,javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다</strong>
-    <hr>
-    <h3>개인정보</h3>
-    <p>이름 <input type="text" value="공백없이 입력하세요"> </p>
-    <p>연락처<input type="text" /></p>
-    
-    <h3>지원분야</h3>
-    <p>
-        
-         <input type="radio" name="food"/>웹퍼블러싱<br>
-         <input type="radio" name="food"/>웹 프론트엔드<br>
-         <input type="radio" name="food" />모바일 앱<br>
-    </p> 
-    </ul>
-    <h3>지원동기</h3>
-    <textarea rows="10" cols="100"></textarea>
-</body>
-
-    <table>
-        <tr>
-            <td><p><input type="button"  value="접수하기"/></p></td>
-            <td><p><input type="button"  value="다시쓰기"/></p></td>
-        </tr>
-    </table>
-    
-</body>
-</html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			*{ margin:0; padding:0;} /* *: body안에 있는 모든 태그를 의미한다. */
+			
+			dl{ width: 650px;
+				border: 5px double gray;
+				
+				/* 상하마진0, 좌우마진 브라우저 자동정렬 -> auto를 사용하려면 반드시 width속성이 적용되어 있어야 한다. */
+				margin: 0 auto;}
+			
+			dt{ padding: 15px 0;
+				text-align:center;
+				background:#aaf;
+				border-bottom:10px solid blue;
+				letter-spacing:10px;}/* 자간 */
+			
+			dd{ padding: 10px 0;
+				text-indent:15px;}/*  */
+		
+			.line{ border-bottom:3px dotted black;}
+			
+		</style>
+		</head>
+		
+		<body>
+			<dl>
+				<dt>한국의 속담</dt>
+					<dd class="line">
+						까마귀 날자 배 떨어진다.
+					</dd>
+					<dd>
+						발없는 말이 천리 간다.
+					</dd>
+			</dl>
+		
+		</body>
+	</html>
