@@ -1,1 +1,37 @@
-h2{color:greenyellow;}
+h2{
+    color: red;
+}
+.highlight{
+    border:solid;
+}
+#profile{
+    border: blue solid;
+}
+
+/* 썸네일을 포함하고 있는 div */
+.thumbnail_grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* fr(fraction) 사용 가능한 공간의 일부분
+비율로 공간을 나눈다고 생각하면 된다. */
+
+/* 썸네일 이미지 */
+.thumbnail{
+    width:100%;
+}
+
+#stat_bar{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    margin-top: 5px;
+    margin-bottom : 5px;
+}
+
+.stat{
+    text-align: center;
+}
