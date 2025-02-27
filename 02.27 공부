@@ -1,0 +1,18 @@
+02.27 class
+
+flex의 container 속성
+justify-content: 메인축을 기준으로 수평에서의 정렬
+align-content:메인축을 기준으로 수직에서의 정렬
+
+화면 정중앙 세팅
+justity-content: center;
+align-items: center;
+
+1.html 뼈대부터 만들어라
+2. 요소 하나하나의 css 적용하기 
+
+CSS파일을 분리하는 이유
+1.HTML 코드 내부에서 디자인과 관련된 요소를 제거할 수 있기 때문이다.
+-> HTML 코드가 정보의 전달과 웹 페이지의 구조 설계라는 본연의 기능에 집중할 수 있게 되었다.
+2.협업의 편의성
+->웹 페이지의 기능적 측면에만 집중할 수 있다는 장점이 있다
