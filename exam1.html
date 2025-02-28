@@ -1,41 +1,72 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-		<meta charset="UTF-8">
-		<title>Insert title here</title>
-		<style>
-			*{ margin:0; padding:0;} /* *: body안에 있는 모든 태그를 의미한다. */
-			
-			dl{ width: 650px;
-				border: 5px double gray;
-				
-				/* 상하마진0, 좌우마진 브라우저 자동정렬 -> auto를 사용하려면 반드시 width속성이 적용되어 있어야 한다. */
-				margin: 0 auto;}
-			
-			dt{ padding: 15px 0;
-				text-align:center;
-				background:#aaf;
-				border-bottom:10px solid blue;
-				letter-spacing:10px;}/* 자간 */
-			
-			dd{ padding: 10px 0;
-				text-indent:15px;}/*  */
-		
-			.line{ border-bottom:3px dotted black;}
-			
-		</style>
-		</head>
-		
-		<body>
-			<dl>
-				<dt>한국의 속담</dt>
-					<dd class="line">
-						까마귀 날자 배 떨어진다.
-					</dd>
-					<dd>
-						발없는 말이 천리 간다.
-					</dd>
-			</dl>
-		
-		</body>
-	</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //농구공이 23개 있다.
+        //하나의 박스에 4개씩 들어갈 수 있다.
+        //총 필요한 박스의 개수를 구하세요
+        // 박스의 개수: 
+        //Math.ceil(구한거) 올림해줌
+        let ball = 23; // 총 농구공 개수
+        let box = 4; // 한 박스당 들어가는 공 개수
+
+        let answer = ball % box == 0 ? ball/box : Math.ceil(ball/box);
+   
+          document.write("박스의 개수:" + answer+"개<br>");
+        
+
+        //사각형의 면적과 둘레 계산하기
+        //가로: 10
+        //세로: 5
+        //면적:
+        //둘례:
+        let width = 10;
+        let height = 5;
+
+        let area = width * height;
+        let perimeter = 2 * (width + height);
+
+        document.write("면적: " + area + "<br>");
+        document.write("둘레: " + perimeter + "<br>");
+
+        //숫자들의 평균구하기
+        //숫자1: 89
+        //숫자2: 95
+        //숫자3: 75
+        //총합: 
+        //평균:
+        let num1 = 89;
+        let num2 = 95;
+        let num3 = 75;
+
+        let total = num1 + num2 + num3;
+        let average = total / 3;
+
+        document.write("총합: " + total + "<br>");
+        document.write("평균: " + average.toFixed(2) + "<br>");
+
+        //하루의 총 시간을 초로 계산하기
+        let hours = 24;
+        let minutes = 60;
+        let seconds = 60;
+
+        let totalSeconds = hours * minutes * seconds;
+
+       document.write("하루는 총 " + totalSeconds + "초입니다.<br>");
+
+       //섭씨 온도를 화씨 온도로 변환하기
+       //화씨 = 섭씨 * 1.8 +32;
+       //25도를 화씨로 변환하여 출력하세요
+       let celsius = 25; 
+       let fahrenheit = celsius * 1.8 + 32;
+
+       document.write(celsius + "도는 화씨로 " + fahrenheit + "도입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
