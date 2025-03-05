@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for(let i =0; i < 3; i++){
+            console.log(i);
+        }
+
+        //시작값과 종료값 사이에서
+        //참이되는 숫자의 개수가 반복횟수라고 보면 된다
+
+      // document.write("<ul>");
+       // document.write("<hr>");
+       // for(let i = 0; i< 3; i++){
+        //    document.write("<li>안녕</li>");
+       // }
+       // document.write("</ul>");
+
+        //곱하기 연산을 9번 수행
+       // let dan = 5;
+       // document.write("<hr>");
+       // for(let i =1; i <10; i++){
+          //  document.write(`${dan} x ${i} = ${dan * i}<br>`)
+       // }
+
+      //  document.write('<hr>')
+       // //10부터 1까지 출력하기 거꾸로
+       // for (let i = 10; i > 1; i--) {
+        //    document.write(`${i}<br>`);
+       // }
+
+        //1부터 10까지의 총합
+       // for (let i = 1; i <= 10; i++) {
+        //    sum += i;
+          //  document.write()
+      //  }
+
+        //1부터 10까지 중 짝수만 출력하기
+       // for (let i = 2; i <= 10; i += 2){
+         //   document.write(i, "<br>");
+      //  }
+       // document.write("<hr>");
+        //1~10까지 3의 배수만 출력하기
+      //  for (let i = 1; i <= 10; i++) {
+          //  if (i % 3 === 0) {
+        //        document.write(`${i}<br>`);
+         //   }
+      //  }
+
+    //    document.write("<hr>");
+        //for문의 중첩
+        //반복문을 반복하기
+    //    for(let i =1; i , 4; i++){
+     //       for(let j =1; j , 4; j++){
+      //          document.write(i,"", j,"<br>");
+      //      }
+      //  }
+    
+        //A A A
+        //A A A
+        //A A A
+        //A A A
+
+        for(let i =0; i<4; i++){
+            for(let j=0; j<3; j++){
+                document.write('A');
+            }
+            document.write("<br>");
+        }
+
+        //1 2 3 4 
+        //1 2 3 4 
+        //1 2 3 4 
+        for(let i=0; i<3; i++){
+            for(let j=0; j<5; j++){
+                document.write(j,"");
+            }
+            document.write("<br>");
+        }
+
+        //1 2 3 4
+        //5 6 7 8
+        //9 10 11 12
+
+        let num=1;
+        for(let i=0; i<3; i++){
+            for(let j=0; j<4; j++){
+                document.write(num++,"")  //num +=1  
+            }
+            document.write("<br>");
+        }
+
+        //* * *
+        //* * *
+        //* * *
+        //* * *
+
+        for(let i=0; i<4; i++){
+            for(let j=0; j<3; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+
+        //*
+        //* *
+        //* * *
+        //* * * *
+        //* * * * *
+        for(let i = 1; i <=5; i++){
+            for(let j = 0; j < i; j++){
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+
+        //        *
+        //      * *
+        //    * * *
+        //  * * * *
+        //* * * * *
+        for (let i = 0; i < 5; i++) {
+    
+         for (let j = 0; j < 5 -(i + 1); j++) {
+         document.write('&nbsp');
+         }
+         for (let k = 1; k <= i + 1; k++) {
+         document.write("* ");
+        }
+        document.write("<br>");
+        }
+
+        //1 2 3 4 5 6 7 8 9 10
+        
+        for(let i = 1; i <=10; i++){
+            for(let j = 0; j <10; j++){
+                let num = i+j;
+                if(num > 10){
+                    num -= 10;
+                }
+                document.write(num," ");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

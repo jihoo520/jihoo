@@ -46,6 +46,28 @@ switch (op) {
         console.log(`${num}는 홀수입니다.`);
         break;
     }
+
+    //month 변수에 1 ~12 중 하나를 대입 해당 month에 몇일 있는지 출력
+    //예시출력결과:3월은 31일까지 있습니다
+
+    let month = 3;
+
+    switch(month){
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                console.log(`${month}월은 31일 까지 있습니다.`)
+                break;
+            case 4: case 6: case 9: case 11:
+            console.log(`${month}월은 30일 까지 있습니다.`)               
+                break;
+            case 2:
+            console.log(`${month}월은 28일 까지 있습니다.`)        
+                break;
+            default:
+            console.log(`${month}월은 없습니다.`)        
+            break;
+    }
+    
+    
     </script>
 </head>
 <body>
