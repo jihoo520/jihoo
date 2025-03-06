@@ -1,45 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //원의 넓이를 구하는 circleArea함수 만들기
+        //원의 둘레를 구하는 circleRound 만들기
+        //circleArea는 함수 안에서 출력하고 마무리
+        //circleRound는 둘레를 반환하기
+        //원의 넓이: 3.14 * 반지름 * 반지름
+        //원의 둘례: 2* 3.14 * 반지름
+
+        //넓이
+        function circleArea(r){
+            let result = r * r * 3.14;
+            document.write(`원의 넓이: ${result}<br>`);
+      
+        }
+
+        circleArea(3);
+
+       //둘레
+       function circleRound(r){
+        let result= 2*3.14*r;
+        return result
+       }
+       document.write(`원의 둘레: ${circleRound(3)}<br>`)
+
+       //사칙연산을 하는 arithmetic 함수만들기
+       // 두 숫자의 덤셈, 뻴셈, 곱셈, 나눗셈을 구하여 출력하기
+       function arithmetic(x, y){
+        console.log(`x + y -> ${x+y}`);
+        console.log(`x - y -> ${x-y}`);
+        console.log(`x * y -> ${x*y}`);
+        console.log(`x / y -> ${x/y}`);
+
+       }
+       arithmetic(10, 7);
+
+       //fToc함수를 만들어서 화씨를 섭씨로 바꿔서 출력하기
+       //cTof함수를 만들어서 섭씨를 화씨로 바꿔서 출력하기
+       //화씨 -> 섭씨: (화씨 -32) /1.8
+       function fToc(f){
+        let result= (f -32) / 1.8;
+        document.write(`화씨 -> 섭씨: ${result}<br>`);
+       }
+       fToc(23);
+       
+      //섭씨 -> 화씨 : 1.8*섭씨 + 32
+       function cTof(c){
+       let result = c * 1.8 + 32;
+       document.write(`섭씨 -> 화씨: ${result}<br>`);
+       }
+       cTof(15);
+
+
+       //1~9 사이의 정수를 전달하여 해당 구구단을 출력하는 showTable함수
+       //작성하기 (화면에 출력하시오)
+       function showTable(n) {
+        document.write(`<h3>${n}단</h3>`);
+         for (let i = 1; i <= 9; i++) {
+        document.write(`${n} x ${i} = ${n * i}<br>`);
+         }
+       }
+
+       showTable(4);
+
+       //매개변수로 임의의 숫자를 전달하여 1~ N까지의 총합을 구하는
+       //total함수 만들고 값을 반환하여 화면에 출력하기
+     // function total(N){
+       // let total= 0;
+      //  for
+     // }
+
+     // total(10);
+     // document.write("<hr>");
+
+      //N ~ M 까지의 총합
+      //N이 M보다 큰 경우 자리를 바꿔서 총합 구하기
+      //예) 1 ~ 5 까지의 합이랑 5 ~ 1 까지의 합이 같아야함
+      function total(N, M) {
+    if (N > M) {
+        [N, M] = [M, N]; 
+    }
+    
+    let sum = 0;
+    for (let i = N; i <= M; i++) {
+        sum += i;
+    }
+    return sum;
+    }
+
+     document.write(`N 부터 M 총합: ${total(1, 5)}<br>`);
+     document.write(`M 부터 N 총합: ${total(5, 1)}<br>`);
+        
+     
+
+
+      //숫자들이 담긴 배열을 매개변수로 받아, 배열 내 최대값을 반환하는
+      //max_arr함수 만들기
+      function max_arr(arr){
+        let max =  arr[0];
+        for(let x of arr){
+            if(x > max){
+                max =x;
+            }
+           return max;
+        }
+        document.write("가장 큰수: ", max_arr([1,2,3,4,5]))
+      }
+
+     //문자열 뒤집기
+     //문자열을 매개변수로 받아,
+     //해당 문자열을 뒤집어 반환하는 함수reverse를 작성하시오
+     function reversed(s){
+        let str = s;
+        let reversed = "";
+
+        for(let i = str.length-1; i >=0; i--){
+            reversed += str[i];
+        }
+        document.write(reversed);
+     }
+     reversed("hello");
+
+    
+
+
+    </script>
 </head>
 <body>
-    <h1>온라인 서점에 오신 것을 환영합니다!</h1>
-    <hr>
-    <a href="#">홈</a>|<a href="#">베스트셀러</a>|<a href="#">신간 도서</a>|<a href="#">고객센터</a>
-    <hr>
-    <h2>베스트셀러 목록</h2>
-
-    <table border="1">
-        <thead>
-            <tr>
-                <th>책 제목</th>
-                <th>저자</th>
-                <th>가격</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="#">HTML마스터</a></td>
-                <td>홍길동</td>
-                <td><del>20,000</del> → 18,000</td>
-            </tr>
-        </tbody>
-            <tr>
-                <td><a href="#">CSS완벽가이드</a></td>
-                <td>김철수</td>
-                <td><del>25,000</del> → 22,000</td>
-            </tr>
-            <tr>
-                <td><a href="#">자바스크립트 고급</a></td>
-                <td>이영희</td>
-                <td><del>30,000</del> → 27,000</td>
-            </tr>
-    </table>
+    
 </body>
 </html>
