@@ -74,6 +74,12 @@ aws,
 github페이지
 깃허브에서는 무료로 웹페이지를 호스팅 할 수 있는 서비스를 제공한다
 
+레포지토리로 이동 -> settings -> 왼쪽메뉴에 pages
+-> branch에 master or main 설정
+
+주의해야할점
+root폴더에 index.html이 존재해야한다.
+
 html,css,js -> 우리컴퓨터에서만 볼 수 있음 로컬환경
 
 
