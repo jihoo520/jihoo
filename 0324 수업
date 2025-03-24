@@ -1,0 +1,74 @@
+03.24
+
+if문 중요
+
+switch
+ㄴ조건을 여러개놓고 선택할떄 유용
+ㄴ비교값과 일치하는 조건값을 한번에 찾아가기 때문에
+if보다는 빠르다
+
+let f{
+   switch
+       case bt1:
+                  fjkd;sf
+                    break;
+}
+
+for
+ㄴforEach()
+let numbers = [1,2,3,4,5]
+기존
+for(let i = 0; i < numbers.length; i++){
+                 console.log(numbers[i];
+}
+<Each문을 사용하여 간결하게 만듬>
+numbers.forEach((x) => console.log(x))
+
+게시판 or 상품 데이터를 나열할 때 사용
+
+for..in
+for..of
+
+while
+내가 몇번 반복해야할지 모를때 사용하면 유용하다
+숫자 맞추기 퀴즈(몇번만에 맞출 수 있나)
+조건을 검증하고 반복을 실행
+do-while
+반복을 1회 실행을 하고 조건을 검증
+
+예제
+do{
+System.out.print("비밀번호 입력:");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
