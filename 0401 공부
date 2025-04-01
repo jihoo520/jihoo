@@ -1,0 +1,103 @@
+0401 공부
+
+제네릭스
+클래스나 메서드에서 사용할 데이터의 타입을 객체를 만드는 시점에
+결정할 수 있도록 해주는 기능
+컴파일시 타입 안정성을 확보하고, 형변환을 줄여준다는 장점이 있다.
+
+public class A<T>{
+T value;
+}
+A<String> a = new A<>();
+
+a.value = 문자열
+
+A<integer> a = new A<>();
+
+a.value = 정수
+
+매개변수 -> 데이터를 전달
+타입 매개변수 -> 타입을 전달
+
+제네릭은 형변환이 안된다
+< T extends NUmber> -> Number부터 자식클래스만 들어올 수 있다.
+
+<T super intger> -> intger 부터 부모클래스만 들어올 수 있다.
+
+public void f(List< ? extends NUmber> list){
+
+}
+
+켈렉션 프레임워크
+
+대량의 데이터를 담을 수 있는 자료구조
+인터페이스와 클래스 형태로 제공
+
+Collection
+
+List,Set        Map   -> 인터페이스, 상수, 추상메서드, default 메서드들
+
+ArrayList
+내부에서는 배열을 기반으로 작동한다
+인덱스가 존재한다
+데이터를 넣는대로 들어간다(제한이 없다)
+인덱스가 존재하기 때문에 조회에 유리하다
+추가/삭제에는 불리하다
+주소가 연속적이다
+
+Linked List
+노드(node)를 기반으로 동작
+주소가 연속적이지는 않다
+추가/삭제에 유리하다
+실질적으로 인덱스가 존재하지는 않는다
+조회에 불리하다
+
+ArrayList<String>list = new ArrayList<>();
+ass(E e): 데이터를 추가(맨뒤에 들어간다)
+add(int index, E e): 데이터를 추가(개가 우너하는 위치에 추가)
+set(int index, E e): 내가 원하는 위치의 데이터를 수정
+remove(int index): 내가 원하는 위치의 데이터를 삭제
+clear(): 리스트안의 내용을 모두 삭제(리스트는 유지)
+contains( E e): 리스트 안에 요소가 있는지 판별
+
+public class User{
+private String id;
+private int pwd;
+private String tel;
+private String address;
+
+settere&getter:
+}
+
+ArrayList<User>list = new ArrayList<>();
+
+list.add(new User());
+list.add(new User());
+
+list.get(0).setId("park");
+list.get(0).getId(); -> park
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
