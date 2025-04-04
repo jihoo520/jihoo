@@ -3,106 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        /* 로그인 */
-        .login-container {
-            background: white;
-            padding: 20px;
-            width: 350px;
-            border-radius: 10px; /* 꼭지점 둥글게 만들어주는 속성*/
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .login-container h2 {
-            margin-bottom: 20px; /* text-ailgn: center; (텍스트 중앙 정렬)*/
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .input-group label {
-            font-size: 14px;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* 입력필드 스타일*/
-        .input-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        /* 로그인 버튼 스타일 */
-        .login-btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer; /* 누르는 모양으로 마우스 포인터 변경*/
-            margin-top: 10px;
-        }
-
-        .login-btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* 회원가입 링크 스타일 */
-        .register-link {
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .register-link a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .register-link a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<!-- 클래스나 아이디 값 관련있는걸로 적기 -->
-    <div class="login-container">
-        <h2>로그인</h2>
-        <form>
-            <div class="input-group">
-                <label for="username">아이디</label>
-                <input type="text" id="username" placeholder="아이디를 입력하세요">
-            </div>
-            <div class="input-group">
-                <label for="password">비밀번호</label>
-                <input type="password" id="password" placeholder="비밀번호를 입력하세요">
-            </div>
-            <button type="submit" class="login-btn">로그인</button>
-        </form>
-        <p class="register-link">아직 회원이 아니신가요? <a href="singup.html">회원가입</a></p>
-    </div>
+<div class="signup-container">
+   
+    <a href="http://koreaisacademy.com/" target="_blank">
+        <img src="logo.png" alt="코리아그룹 로고" class="logo">
+    </a>
+    <h1>PLEASE JOIN US</h1>
 
+    
+    <form id="signup-form">
+       
+        <label for="userid">아이디</label>
+        <input type="text" id="userid" name="userid" placeholder="아이디를 입력해 주세요" required minlength="4">
+        <small id="userid-message">소문자/숫자 4자이상을 입력해 주세요</small>
+
+    
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" placeholder="비밀번호를 입력해 주세요"
+               required minlength="8" maxlength="20">
+        <small id="password-message">8~20자의 영문 대/소문자,숫자,특수문자를 사용하세요</small>
+
+       
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력해 주세요" required>
+        <small id="name-message"></small>
+
+        
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="이메일을 입력해 주세요" required>
+        <small id="email-message">이메일을 입력해 주세요.</small>
+
+        
+        <button type="submit">가입 완료하기</button>
+    </form>
+</div>
+<script src="login.js"></script>
 </body>
 </html>
