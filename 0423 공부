@@ -1,0 +1,127 @@
+0423
+
+라우팅
+주소창의 URL과 매칭되는 컴포넌트를 렌더링 하는것
+
+<BrouseRouter>로 컴포넌트를 묶어놔야 라우터를 쓸 수 있다
+
+<Routes> 라우팅의 그룹
+
+<Route path="url" element=컴포넌트> URL에 맞는 컴포넌트를 랜더링
+
+주소창의 URL을 직접 작성할 수 없으니 해당 URL로 이동할 수 있게 해주는 <Link> 컴포넌트를 사용한다
+
+<Link to="/경로">
+
+<Link to = {{
+     pathname: '/search',
+     search:'?query=react',
+}}/>
+
+동적라우팅
+<Route path="/productld/:id" element=<product/>
+
+URL에 들어있는 값이 변수에 매핑되고
+
+컴포넌트에서 useparam() 훅으로 받아서 컴포넌트 내부에서 사용할 수 있다
+
+
+key
+형제 요소내에서 순서가 바뀌거나, 값이 추가되거나 삭제되거나 할떄 리액트는 바뀌지 않은 요소에 대해서는
+굳이 재렌더링을 하지 않는다 그걸 key를 통해 알 수 있다.
+
+Context API 의 사용법
+
+데이터를 전달하는 방법
+
+1.부모 컴포넌트에서 props 전달하기
+
+함수를 호출하면 함수를 선언한 쪽으로 가서 기능을 수행하고 반환값을 가지고 돌아온다
+
+Context Api로 다크 모드 상태 관리하기
+사용자는 라이트모드와 다크모드를 전환할 수 있어야 하며
+선택된 테마에 따라 화면으 스타일이 변경된다
+
+1.ThemeContext를 생성하여, 전역적으로 다크모드 상태를 관리
+2. ThemeProvider 컴포넌트에서 테마 상태를 관리하고 이를 하위 컴포넌트에서 제공하세요
+3. ThemeSwithcher 컴포넌트에서 만들고, 사용자가 다크모드와 라이트 모드를 전환할 수있게 만드세요
+
+쇼핑물 장바구니 기능 구현하기
+사용자가 제품을 장바구니에 담고, 수량을 변경, 삭제할 수 있는 기능이 필요하다
+전역상태로 관리되는 장바구니 정보는 어느 페이지에서든 접근 가능해야 하며,
+헤더에는 담긴 제품의 개수와 총 금액이 실시간으로 표시되어야 한다.
+
+
+1. CartContext생성하기
+- CartProvider컴포넌트를 구현
+장바구니state : cosnt[items, setItems] = useState([])
+상태를 갱신하는 메서드 : addItem, removeItem, updateQuantity, clearCart를 가진다.
+
+- 추가를 할 때 객체에 quantity프로퍼티도 추가해야한다.
+
+export const products = [
+  { id: '1', name: 'Laptop', price: 1200000 },
+  { id: '2', name: 'Smartphone', price: 800000 },
+  { id: '3', name: 'Headphones', price: 150000 },
+];
+
+2. index.js에서 최상위 래핑
+- <CartProvider>로 App을 감싼다.
+
+3. 제품목록 페이지
+- 더미데이터로 구성된 제품리스트를 렌더링한다.
+- 각 제품마다 "장바구니에 담기"버튼을 두고, 클릭시 addItem을 호출해 장바구니에 추가한다.
+- 동일한 제품을 여러번 담으면 quantity만 늘어나도록 구현한다.
+
+4. 헤더 컴포넌트
+- 상품페이지로 가능 링크 만들기
+- useContext(CartContext)를 사용해 전체 아이템 수(모든 양의 합)과 총 금액(price * quantity의 값)을 계산하여 표시한다.
+ex) 상품 | 10 - 50000원
+
+5. 장바구니 페이지
+- 장바구니에 모든 CartItem을 목록으로 보여준다.
+- 각 항목마다 수량을 변경할 수 있는 <input type="numbr">필드와 "삭제"버튼을 제공한다.
+- 수량 변경 시 updateQuantity(id,새 양) 호출, 삭제시 removeItem(id)를 호출한다.
+- 장바구니 비우기 버튼을 클릭하면 clearCart()호출
+
+6. 리액트 라우팅
+- /products, /cart 경로를 설정
+- 헤더의 장바구니 클릭시 /cart로 이동하도록 한다.
+
+  <>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Navigate to="/products" />} />
+      <Route path="/products" element={<ProductList />} />
+      <Route path="/cart" element={<CartPage />} />
+    </Routes>
+  </>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
