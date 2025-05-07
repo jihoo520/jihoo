@@ -1,0 +1,128 @@
+0507 공부 
+
+요청 -> url과 맞는 컨트롤러로 매핑이 된다 -> 컨트롤러 메서드에서
+service를 호출 -> service 메서드에서 repository를 호출 -> repository에서
+디비와 통신을 해서데이터를 얻어온다 -> 서비스로 반환 -> 컨트롤러로 반환 -> 응답
+
+CORS(Cross-Origin Resource Sharing)
+-교차 출처 리소스 공유
+
+출처(origin)
+-프로토콜과 호스트주소 그리고 포스트번호를 합친것
+ex) http://localhost:3000
+-서버의 위치를 찾아가기 위해 필요한 가장 기본적인 것들을 합쳐놓은것
+
+동일 출처 정핵요청 -> url과 맞는 컨트롤러로 매핑이 된다 -> 컨트롤러 메서드에서
+service를 호출 -> service 메서드에서 repository를 호출 -> repository에서
+디비와 통신을 해서데이터를 얻어온다 -> 서비스로 반환 -> 컨트롤러로 반환 -> 응답
+
+CORS(Cross-Origin Resource Sharing)
+-교차 출처 리소스 공유
+
+출처(origin)
+-프로토콜과 호스트주소 그리고 포스트번호를 합친것
+ex) http://localhost:3000
+-서버의 위치를 찾아가기 위해 필요한 가장 기본적인 것들을 합쳐놓은것
+
+동일 출처 정핵(Same-Origin policy)
+-브라우저는 기본적으로 보안을 위해 동일 추처 정책이라는 규칙을 따른다
+-즉, 웹 페이지가 한 출처에서 로드되었을 때, 다른 출처에서 데이터를 요청하는 것을 제한하는 정책
+-이 정책은 보안을 위해, 악의적인 웹사이트가 사용자의 브라우저를 이용해 다른 출처에서 데이터를 가져오지 못하게
+막는 역할을 한다
+
+리액트의 렌더링
+-리액트는 브라우저에 보이는 HTML DOM 트리의 다른 버전인 ReactDOM 을 가지고 있다
+-어떤 이유에서 컴포넌트의 상태가 변하면 ReactDOM은 이를 감지하고 컴포넌트 함수를 다시 호출함으로써 변경된 부분의 HTML
+을 바꿔준다
+-HTML이 업데이트되면 우리는 변경된 결과를 눈으로 확인할 수 있다
+
+무한루프에 빠진 리액트
+=렌더링이 가장 처음 일어나느 순간, 리액트는 ReactDOM 트리가 존재하지 않는 상태에서
+처음으로 각 컴포넌트 함수를 호출해 자신의 DOM트리를 구성한다
+-어플리케이션에서 가장 처음 호출되는 함수는 APP()
+-내부에서 asxios를 이용해서 Todo API를 호출한다
+-axios를 사욯한 API 호출은 비동기 호출이기 때문에 API호출 후 응답이 올 떄까지 기다리지 않는다
+-기다리지 않고 함수를 반환했기 떄문에 Add 
+
+ApiService -> 백엔드 호출을 함수화
+앞으로 백엔드에 대한 호출이 필요하면 
+
+수저
+타이틀 변경을 위해 input의 필드에서 사용자가 입력을 받아올 때 editEventHandler() 에서 item을 바로 넘겨버리면
+한 글자씩 입력할 때 마다 HTTP 요청을 보내게 된다
+-이는 비효율적이기 떄문에 수정을 완료한 시점에서 HTTp 요청을 보내고 싶다
+-입력이 끝나서 수정이 불가능한 상태로 바뀌는 시점
+
+사용자 관리 시스템
+-사용자의 정보를 관리하는 기능을 갖는  API 만들기
+
+
+
+프로젝트 만들기
+start.spring.io에서 프로젝트 생성하기
+group : com.korea
+artifact : user
+필요 라이브러리
+Spring Web
+h2
+lombok
+Spring Data JPA
+
+com.korea.user.model 패키지
+UserEntity클래스 만들기
+- 유저는 id,name,email 필드를 갖는다.
+- id는 자동으로 값을 부여한다.
+
+com.korea.user.dto 패키지
+UserDTO클래스 만들기
+- UserDTO는 id,name,email필드를 갖는다.
+- DTO에서 Entity, Entity에서 DTO로 변환할 수 있는 기능이 있다.
+
+com.korea.user.repository패키지
+UserRepository인터페이스 생성
+- JpaRepository를 상속받는다.
+- 이메일을 통해 유저를 찾는 findByEmail추상메서드를 추가한다.
+
+com.korea.user.service패키지 생성하기
+UserService 클래스 생성하기
+- 사용자를 생성하는 create메서드 만들기
+- 생성하고 추가가 잘됐는지 조회 결과를 반환한다.
+
+com.korea.user.controller패키지 생성하기
+UserController클래스
+- mapping : /users
+유저를 추가하는 createUser메서드 작성하기
+ㄴ 반환형은 ResponseEntity
+
+2.모든 사용자 조회 기능 만들기
+
+3. 이메일을 통해 사용자 검색하는 기능 만들기
+3-1 @PathVariable 사용하기
+
+4.ID를 통해 이름과 이메일 수정하기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
