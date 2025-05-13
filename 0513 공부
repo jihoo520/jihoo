@@ -1,0 +1,48 @@
+0513
+
+상품관리 서비스 만들기
+- 상품과 주문에 대한 관리를 할 수 있는 서비스 만들기
+
+상품 추가, 조회 만들기
+스프링부트 프로젝트
+group : com.korea
+Artifact : product2
+
+필요의존성
+Spring web
+h2
+lombok
+jpa
+spring devtools
+
+ProductEntity
+- int 상품id(primary key)
+- String 상품이름
+- int 상품 재고
+- int 상품 가격
+- LocalDateTime 등록 날짜 @CreationTimeStamp
+- LocalDateTime수정 날짜 @UpdateTimeStamp
+
+ProductDTO
+Entity <-> DTO 변환하는 기능을 갖는다.
+
+ResponseDTO
+- String error
+- List<T> data;
+
+모든 상품 조회하기
+- 데이터베이스에 들어있는 모든 상품을 조회하세요
+- 메서드명 : findAll()
+
+포스트맨을 이용하여 결과를 확인하세요
+{
+    "error": null,
+    "data": []
+}
+
+상품 추가하기
+- 데이터베이스에 상품 추가하기
+- 메서드명 create()
+- 추가하고 전체 내용 반환하기
+
+포스트맨으로 결과 확인하기
