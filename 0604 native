@@ -1,0 +1,19 @@
+조건에 맞지 않을 때 에러문구를 렌더링
+
+이름이 비어있을 때
+Please Enter your name
+
+이메일 형식이 맞지 않을 때
+Please verify your email
+
+비밀번호의 길이가 6보다 작을 때
+The password must contain 6 characters at least.
+
+비밀번호와 비밀번호 confirm이랑 일치하지 않을 때
+Password neet to match
+
+모든조건이 맞을 때
+''
+
+입력해야 하는 값이 많은 만큼 유효성 검사와 오류 메시지의 종류가 많아지므로 useEffect를 이용해
+관련된 값이 변할 때마다 적절한 오류 메시지가 랜더링된다
