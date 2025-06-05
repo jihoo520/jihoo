@@ -1,0 +1,108 @@
+0605 
+
+컴포넌트들로 이루어진다
+컴포넌트를 정의하면서 공통적인 부분만 미리 만들어놓는다
+각각의 사용처마다 내용이 다른 부분만 props로 받아서 처리
+
+image -> 이미지의 경로를 미리 지정할 수 없다
+Button -> 텍스트,스타일 미리 지정할 수 없다
+input -> value를 미리 받을 수 없다.
+
+KeyboardAwareScrollView
+키보드가 올라왔을 때 입력창이 가리지 않게 해주는 역할
+contentContainerStyle: ScrollView 안쪽 컨텐츠의 스타일을 설정한다
+extraHeight: 키보드가 올라갈 때 추가로 스크롤할 높이
+enableOnAndroid: 안드로이드에서 키보드가 인식 기능을 활성화 할지 여부 기본값은 false
+enableAutomaticScroll: 포커스된 TextInput이 키보드에 가려질 경우 스크롤 할지 여부
+기본 값은 true
+
+<KeyboardAwareScrollView>
+          ...내용
+</KeyboardAwareScrollView>
+
+position: absolute
+부모 요소를 기준으로 절대 위치에 배치한다
+static: 문서의 흐름에 따라 배치된다
+relative: 자기 자신의 원래 위치를 기준으로 문서 흐름이 유지
+fixed: 브라우저를 기준으로 위치를 고정
+sticky static -> fixed처럼 동작하는 하이브리드, 설정한 위치에 도달하면 고정된다
+
+position이 결정이 되면 top,right, bottom,left같은 위치 관련 속성을 결정해야 한다
+
+이제 버튼을 클릭하면 기기의 사진첩에 접근해서 사진의 정보를 가져오는 기능을 추가해보자
+
+npm install expo-image-picker
+
+launchImagelibraryAsync(options)
+인자로 전달할 수 있는 option
+
+mediaTypes 선택 가능한 파일 타입 [images,videos,all]
+allowEditing 이미지 선택 후 편집 화면을 띄울지 boolean
+
+aspect 편집시 고정 비율 [1,1]
+quality 저장될 이미지/비디오의 품질 1은 최고화질
+
+1.패키지 설치
+expo-image-picker
+
+2.ImagePicker.request
+
+3.launchImageLibraryAsync()
+옵션을 주고 실행해서 선택한 이미지의 정보를 돌려받던지, canceled를 돌려 받는다
+
+4. 사진을 선택했다면 uri를 파싱해서 Signup의 photo
+
+
+const creadential = {
+  user:{
+     uid:" 사용자의 고유한 ID"
+email:"로그인한 이메밀"
+displayname:"설정된 닉네임"
+photoURL:
+emailVerified:
+  }
+}
+
+npm install firebase@9.22.2 --force
+
+npm uninstall --force 후
+npm install --force
+
+Spinner 컴포넌트
+로그인 또는 회원가입이 진행되는 동안 데이터를 수정하거나 버튼을 추가로 클릭하는 일이
+발생하지 않도록 Spinner 컴포넌트를 만들어 사용자의 잘못된 입력이나 클릭을 방지하는 기능을 만들어보자
+
+스프링부트 + db + 시큐리티를 이용을 해서 로그인, 회원가입기능을 실제로 만듦
+
+firebase의 기능을 사용하는 것도 괜찮다
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
