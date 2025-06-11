@@ -1,0 +1,23 @@
+moment 라이브러리
+자바스크립트에서 제공하는 함수만으로는 시간을 변경하는게 쉽지가 않다
+moment라이브러리를 사용하면 시간 및 날짜와 관련된 함수를 쉽게 작성할 수 있다
+
+메시지 데이터
+채널 화면도 채널 목록 화면처럼 메시지 데이터의 변화를 실시간으로 전달 받기 위해
+onSnapshot함수를 이용하여 수신 대기상태가 되도록 수정하자
+-그리고 채널 화면으로 이동할 때 route의 params를 통해서 전달된 채널의 문서ID를 
+이용하여 채널 문서에 있는 messages 컬렉션의 문서 변화에 대해 수신 대기 상태가 되도록 작성하자
+
+firebase.js -> addDoc
+Channel -> createMessage
+
+gifted-chat 라이브러리
+
+npm install react-native-gifted-chat --force
+
+
+
+
+
+
+
